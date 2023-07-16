@@ -1,0 +1,96 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\textbf{Prestaciones de una maquina:}
+
+Px= prestaciones de una maquina x
+
+Px=1/TDEx
+
+Prestaciones de la cpu:
+
+Tiempo cpu=ciclos cpu/frecuencia cpu
+
+Tiempo cpu = ciclos cpu * tiempo de ciclo
+
+TDE = tiempo de ejecución de algún programa
+
+Tiempo cpu -\textgreater{} TDE
+
+Tiempo cpu = tiempo de ejecución de cpu para un programa
+
+CPI= ciclos por instrucción
+
+IPC=1/CPI
+
+I= cantidad cualquiera de instrucciones
+
+Ciclos cpu= ciclos de reloj de la cpu que usa el programa
+
+Tiempo de ciclo= 1/frecuencia (tiempo,duración, etc de un ciclo)
+
+\textbf{Prestaciones de la instrucción:}
+
+Ciclos cpu =I*CPI
+
+\textbf{Ecuación clásica de las prestaciones de la cpu:}
+
+TDE=numero de instrucciones*CPI*ciclos CPU
+
+\textbf{Ley de amdahl}
+
+TDE después de mejorar =TDE por mejora/cantidad de mejora +TDE no
+afectado
+
+\end{document}
